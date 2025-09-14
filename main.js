@@ -3,9 +3,10 @@ const data = "202408",
 
 const bankURL = "https://bank.gov.ua/";
 
-const myURL = new URL(bankURL);
+const myURL = new URL("/NBUStatService/v1/statdirectory/banksincexp", bankURL);
+//інший спосіб додавання шляху
 
-myURL.pathname = "/NBUStatService/v1/statdirectory/banksincexp";
+//myURL.pathname = "/NBUStatService/v1/statdirectory/banksincexp";
 
 myURL.searchParams.append("date", data);
 myURL.searchParams.append("period", period);
